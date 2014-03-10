@@ -1,0 +1,65 @@
+.animate {
+}
+
+/* TRANSLATE
+ *
+ * The element moves from its existing position to the 
+ * offset specified by the parameters x, y.
+ *
+ */
+.translate {
+  -ms-transform: translate(100px, 100px); /* IE 9 */
+  -webkit-transform: translate(100px, 100px); /* Chrome, Safari, Opera */
+  transform: translate(50px, 100px);
+}
+
+/* ROTATE
+ *
+ * The element rotates clockwise by the amount specified. A negative value 
+ * will result in an anti-clockwise rotation. Accepts argument in degrees, 
+ * grads, or radians. 
+ *
+ */
+.rotate {
+  -ms-transform: rotate(360deg); /* IE 9 */
+  -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+  transform: rotate(360deg); /* 360deg, 400grad, 6.2831853rad */
+}
+
+/* SCALE
+ *
+ * The element increases or decreases in size by the amount 
+ * specified in parameters x, y
+ *
+ */
+.scale {
+  -ms-transform: scale(0.5, 0.5); /* IE 9 */
+  -webkit-transform: scale(0.5, 0.5); /* Chrome, Safari, Opera */
+  transform: scale(0.5, 0.5);
+}
+
+/* SKEW
+ *
+ * The element turns by the amount specified on the x, y axes.
+ *
+ */
+.skew {
+  -ms-transform: skew(180deg, 20deg); /* IE 9 */
+  -webkit-transform: skew(180deg, 20deg); /* Chrome, Safari, Opera */
+  transform: skew(180deg, 20deg);
+}
+
+/* MATRIX
+ *
+ * The matrix combines all the precending 2D transforms in to one.
+ * For the sake of clarity you are more likely to use the methods
+ * seperately. However the matrix is interesting mathematically.
+ * See http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/
+ * for an in-depth explanation.
+ *
+ */
+.matrix {
+  -ms-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* IE 9 */
+  -webkit-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* Chrome, Safari, Opera */
+  transform:matrix(0.866,0.5,-0.5,0.866,0,0);
+}
