@@ -14,6 +14,8 @@ section#controls {
 
 #object {
   background-image: url('../images/kitteh_350x350.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   height: 350px;
   margin: auto;
   width: 350px;

@@ -10,14 +10,14 @@
  *
  */
 
-@keyframes myfirst {
-from {transform: scale(0.1,0.1);}
-to {transform: scale(1, 1);}
+@keyframes grow {
+from { transform: scale(0.1,0.1); }
+to { transform: scale(1, 1); }
 }
 
-@-webkit-keyframes myfirst /* Safari and Chrome */ {
-from {-webkit-transform: scale(0.1,0.1);}
-to {-webkit-transform: scale(1,1)}
+@-webkit-keyframes grow /* Safari and Chrome */ {
+from { -webkit-transform: scale(0.1,0.1); }
+to { -webkit-transform: scale(1,1) }
 }
 
 /* In order for he animation to fire it must be bound to a selector. 
@@ -25,6 +25,113 @@ to {-webkit-transform: scale(1,1)}
  *
  */
 .animate {
-  animation: myfirst 5s;
-  -webkit-animation: myfirst 5s;
+  animation: grow 5s;
+  -webkit-animation: grow 5s;
+}
+
+
+/* Here are some more examples of the @keyframes rule.
+ * You could write an event handler to trigger these 
+ * from the .fireAnimation button.
+ */
+
+/* PULSE */
+@keyframes pulse {
+	0% { transform: scale(0.5,0.5); }
+	50% { transform: scale(1,1); }
+	100% { transform: scale(0.5,0.5); }
+}
+@-webkit-keyframes pulse {
+	0% { transform: scale(0.5,0.5); }
+	50% { transform: scale(1,1); }
+	100% { transform: scale(0.9, 0.9); }
+}
+.pulse {
+	animation-name: pulse;
+	-webkit-animation-name: pulse;	
+
+	animation-duration: 2s;	
+	-webkit-animation-duration: 2s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;
+}
+
+
+/* ROTATE */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@-webkit-keyframes rotate {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+.rotate {
+  animation: rotate 2s infinite;
+  -webkit-animation: rotate 2s infinite;
+}
+
+
+/* ROTATE X */
+@keyframes rotateX {
+  from { transform: rotateX(0deg); }
+  to { transform: rotateX(360deg); }
+}
+@-webkit-keyframes rotateX {
+  from { -webkit-transform: rotateX(0deg); }
+  to { -webkit-transform: rotateX(360deg); }
+}
+.rotateX {
+  animation: rotateX 5s infinite;
+  -webkit-animation: rotateX 5s infinite;
+}
+
+
+/* ROTATE Y */
+@keyframes rotateY {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+@-webkit-keyframes rotateY {
+  from { -webkit-transform: rotateY(0deg); }
+  to { -webkit-transform: rotateY(360deg); }
+}
+.rotateX {
+  animation: rotateY 5s infinite;
+  -webkit-animation: rotateY 5s infinite;
+}
+
+
+/* NOD */
+@keyframes nod {
+	0% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+	100% { transform: rotate(-5deg); }
+}
+@-webkit-keyframes nod {
+	0% { -webkit-transform: rotate(-5deg); }
+	50% {	-webkit-transform: rotate(5deg); }
+	100% { -webkit-transform: rotate(-5deg); }
+}
+.nod{
+  animation: nod 2s infinite;
+  -webkit-animation: nod 2s infinite;
+}
+
+
+/* BOB */
+@keyframes bob {
+	0% { transform: translateY(0%);	}
+	50% { transform: translateY(10%); }
+	100% { transform: translateY(0%);	}			
+}
+@-webkit-keyframes bob {
+	0% { -webkit-transform: translateY(0%); }
+	50% { -webkit-transform: translateY(10%); }
+	100% { -webkit-transform: translateY(0%); }
+}
+.bob {
+  animation: bob 1.5s infinite;
+  -webkit-animation: bob 1.5s infinite;
 }
