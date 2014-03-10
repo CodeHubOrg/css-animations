@@ -1,0 +1,158 @@
+/* TRANSFORMS */
+
+/* 2D TRANSFORMS */
+
+/* TRANSLATE
+ *
+ * The element moves from its existing position to the 
+ * offset specified by the parameters x, y.
+ *
+ */
+.translate {
+  -ms-transform: translate(100px, 100px); /* IE 9 */
+  -webkit-transform: translate(100px, 100px); /* Chrome, Safari, Opera */
+  transform: translate(50px, 100px);
+}
+
+/* ROTATE
+ *
+ * The element rotates clockwise by the amount specified. A negative value 
+ * will result in an anti-clockwise rotation. Accepts argument in degrees, 
+ * grads, or radians. 
+ *
+ */
+.rotate {
+  -ms-transform: rotate(360deg); /* IE 9 */
+  -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+  transform: rotate(360deg); /* 360deg, 400grad, 6.2831853rad */
+}
+
+/* SCALE
+ *
+ * The element increases or decreases in size by the amount 
+ * specified in parameters x, y
+ *
+ */
+.scale {
+  -ms-transform: scale(0.5, 0.5); /* IE 9 */
+  -webkit-transform: scale(0.5, 0.5); /* Chrome, Safari, Opera */
+  transform: scale(0.5, 0.5);
+}
+
+/* SKEW
+ *
+ * The element turns by the amount specified on the x, y axes.
+ *
+ */
+.skew {
+  -ms-transform: skew(180deg, 20deg); /* IE 9 */
+  -webkit-transform: skew(180deg, 20deg); /* Chrome, Safari, Opera */
+  transform: skew(180deg, 20deg);
+}
+
+/* MATRIX
+ *
+ * The matrix combines all the precending 2D transforms in to one.
+ * For the sake of clarity you are more likely to use the methods
+ * seperately. However the matrix is interesting mathematically.
+ * See http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/
+ * for an in-depth explanation.
+ *
+ */
+.matrix {
+  -ms-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* IE 9 */
+  -webkit-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* Chrome, Safari, Opera */
+  transform:matrix(0.866,0.5,-0.5,0.866,0,0);
+}
+
+
+
+/* 3D TRANSFORMS 
+ *
+ * 3D transforms extend the 2D transforms by incorporating the (virtual) z-axis, extending
+ * in to and away from the plane of our screen.
+ *
+ */
+
+/* TRANSLATE
+ *
+ * A translation on the z-axis will have the effect of moving the object towards or away from the
+ * viewer. I do not know how widely implemented it is yet.
+ *
+ */
+.translateX {
+  -ms-transform: translateX(100px); /* IE 9 */
+  -webkit-transform: translateX(100px); /* Chrome, Safari, Opera */
+  transform: translateX(100px);
+}
+.translateY {
+  -ms-transform: translateY(100px); /* IE 9 */
+  -webkit-transform: translateY(100px); /* Chrome, Safari, Opera */
+  transform: translateY(100px);
+
+}
+.translateZ {
+  -ms-transform: translateZ(100px); /* IE 9 */
+  -webkit-transform: translateZ(100px); /* Chrome, Safari, Opera */
+  transform: translateZ(100px);
+
+}
+
+/* ROTATION *
+ * rotateX, rotateY and rotateZ revolve an object around its x, y or z axis by the given number of
+ * degrees
+ *
+ */
+.rotateX {
+  -webkit-transform: rotateX(45deg); /* Chrome, Safari, Opera */
+  transform: rotateX(45deg);
+}
+.rotateY {
+  -webkit-transform: rotateY(130deg); /* Chrome, Safari, Opera */
+  transform: rotateY(130deg);
+}
+.rotateZ {
+  -webkit-transform: rotateZ(90deg); /* Chrome, Safari, Opera */
+  transform: rotateZ(90deg);
+}
+/* rotate3d takes 4 arguments. The first 3 denote x, y and z coordinates respectively 
+ * of the vecot denoting the axis of rotation. The fourth parameter represents the
+ * angle of rotation.
+ */
+.rotate3d {
+  -webkit-transform: rotate3d(100, 100, 100, 90deg); /* Chrome, Safari, Opera */
+  transform: rotate3d(100, 100, 100, 90deg);
+}
+
+/* SCALING 
+ *
+ * Splitting the scale transform in to scaleX and scaleY also gives rise to a 
+ * scaleZ. The effect of this is not immediately apparent, but can be observed
+ * if you TODO
+ *
+ * */
+.scaleX {
+  -webkit-transform: scaleX(2); /* Chrome, Safari, Opera */
+  transform: scaleX(2);
+}
+.scaleY {
+  -webkit-transform: scaleY(2); /* Chrome, Safari, Opera */
+  transform: scaleX(2);
+}
+.scaleZ {
+  -webkit-transform: scaleZ(2); /* Chrome, Safari, Opera */
+  transform: scaleZ(2);
+}
+
+/* PERSPECTIVE
+ *
+ * Change the perspective from which an element is viewed.
+ * NB. The perspective property will only work on 3D transformed
+ * elements
+ *
+ */
+.perspective {
+  -webkit-perspective: 500px; /* Chrome, Safari, Opera */
+  perspective: 500px;
+}
+
